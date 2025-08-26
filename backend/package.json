@@ -8,6 +8,6 @@
   },
   "dependencies": {
     "express": "^4.18.2",
-    "tiktok-live-chat": "^1.2.0"
+    "tiktok-live-stream-chat-reader": "^2.1.0"
   }
 }
