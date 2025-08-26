@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Basic meta tags for character set and viewport -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Theme color for mobile browsers, set to a neutral color -->
+    <meta name="theme-color" content="#000000" />
+    
+    <!-- Description for search engines -->
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+
+    <!-- Links to the favicon and manifest.json for PWA functionality -->
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    
+    <!-- Title of the web page -->
+    <title>React App</title>
+  </head>
+  <body>
+    <!-- Message for users with JavaScript disabled -->
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    
+    <!-- The root element where the React app will be rendered -->
+    <div id="root"></div>
+
+    <!-- Service worker registration for caching and offline support -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('%PUBLIC_URL%/service-worker.js')
+            .then(registration => {
+              console.log('Service Worker registered!');
+            })
+            .catch(error => {
+              console.log('Service Worker registration failed:', error);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>
